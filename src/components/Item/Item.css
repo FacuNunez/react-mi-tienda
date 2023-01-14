@@ -19,7 +19,8 @@
 
 .precio{
     align-items: center;
-    border: 1px solid;
     color: black;
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column
 }

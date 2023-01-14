@@ -1,9 +1,12 @@
 .counter{
-    width: 10%;
+    width: 100%;
+    height: 20%;
     border: 1px solid black;
     background-color: black;
     font-size: 20px;
-    padding: 1rem;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 
 }

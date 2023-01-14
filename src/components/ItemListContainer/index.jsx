@@ -1,10 +1,10 @@
 import "./ItemListContainer.css";
 import React from "react";
 import Title from "../Title";
-import ItemQuantitySelector from "../ItemQuantitySelector";
+
 import ItemList from "../ItemList";
 import { useEffect, useState } from "react";
-
+import { useParams } from "react-router-dom";
 
 
 const products = [
@@ -49,30 +49,35 @@ const products = [
 ]
 
 const ItemListContainer = ({ texto }) => {
+    
     const [data, setData] = useState([]);
-
+    
+    const {categoriaid} = useParams()
+    
     useEffect( () => {
         const getData = new Promise(resolve =>{
             setTimeout(() => {
                 resolve(products);
             }, 1500);
         });
-        getData.then(res => setData(res));
-    },[])
+        if (categoriaid) {
+            getData.then(res => setData (res.filter(products => (products.category === categoriaid))));
+        }else{
+            getData.then(res => setData(res))
+        };
+    },[categoriaid])
 
 
 
 
-    const onAdd = (quantity) => {
-        console.log(`compraste ${quantity} de productos`);
-    }
+    
     
     
     return (
         <div className="containerItemList">
             <Title greeting={texto} />
             <ItemList data={data} />
-            <ItemQuantitySelector inicial={0} stock={10} onAdd={onAdd}/>
+            
         </div>
 
     )

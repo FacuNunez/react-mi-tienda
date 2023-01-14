@@ -1,22 +1,23 @@
 import React from "react";
-import CartWidget from "../CartWidget"
+import { NavLink} from "react-router-dom";
+import CartWidget from "../CartWidget";
 
-const Nabvar = () => {
+const Navbar = () => {
     return (
         <div className="containerNav">
             <nav className="nav">
                 <div className="nav__brand">
-                    <a className="nav_link" href="#">Tienda de Camisetas</a>
+                    <NavLink className="nav_link" to="/">Tienda de Camisetas</NavLink>
                 </div>
                 <ul className="nav__list">
                     <li>
-                        <a className="nav__link" href="#">Camisetas</a>
+                        <NavLink className="nav__link" to="/categoria/camisetas">Camisetas</NavLink>
                     </li>
                     <li>
-                        <a className="nav__link" href="#">Pantalones</a>
+                        <NavLink className="nav__link" to="/categoria/shorts">Pantalones</NavLink>
                     </li>
                     <li>
-                        <a className="nav__link" href="#"><CartWidget /></a>
+                        <NavLink className="nav__link" to="cart"><CartWidget /></NavLink>
                     </li>
                 </ul>
 
@@ -25,4 +26,4 @@ const Nabvar = () => {
     )
 }
 
-export default Nabvar;
+export default Navbar;
