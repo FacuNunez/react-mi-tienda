@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+
+.styleCart{
+    display: flex;
+    align-items: center;
+    display: block;
+    width: 350px;
+    border: 1px solid black;
+    font-family: 'Secular One', sans-serif;
+    margin-left: 20rem;
+}
+
+.styleCart p {
+    text-align: center;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.styleCart .total{
+   margin-right: 2rem;
+}
+
+.styleCart .boton{
+    text-decoration: none;
+    margin-left: 7rem;
+    border: 1px solid red;
+    background-color: red;
+    font-family: 'Secular One', sans-serif;
+    color: white
+}

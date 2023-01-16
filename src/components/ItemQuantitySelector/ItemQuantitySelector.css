@@ -1,18 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+
 .counter{
-    width: 100%;
+    margin-left: 74px;
+    width: 50%;
     height: 20%;
-    border: 1px solid black;
+    border: 3px solid black;
     background-color: black;
     font-size: 20px;
     padding: 0rem;
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-family: 'Secular One', sans-serif;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
 
 }
 
 .counter .colorButton{
     color:black;
+    font-family: 'Secular One', sans-serif
     
 }
 

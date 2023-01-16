@@ -1,5 +1,5 @@
 import "./ItemQuantitySelector.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ItemQuantitySelector = ({ inicial, stock, onAdd }) => {
     const [contar, setContar] = useState(inicial);
@@ -11,6 +11,9 @@ const ItemQuantitySelector = ({ inicial, stock, onAdd }) => {
     const sumar = () => {
         setContar(contar + 1);
     }
+
+    useEffect(() => { setContar(parseInt(inicial));
+    },[inicial])
 
     return (
         <div className="counter">

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+
 .itemContainer{
     display: flex;
     align-items: center;
@@ -8,6 +11,7 @@
 
 .itemContainer p {
     text-align: center;
+    font-family: 'Sofia Sans', sans-serif;
 }
 
 .fotoItem img{
@@ -18,9 +22,11 @@
 }
 
 .precio{
+    background-color: blue;
     align-items: center;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    font-family: 'Sofia Sans', sans-serif;
 }
