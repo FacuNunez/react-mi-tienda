@@ -26,7 +26,10 @@ const ItemDetail = ({data}) => {
             <span className="precio">${data.price}</span>
             <p>{data.name}</p>
             <p>{data.description}</p>
-            { goToCart ? <Link to="/cart">Terminar Compra</Link> :<ItemQuantitySelector inicial={0} stock={10} onAdd={onAdd}/> }
+            <div className="botTerCom">
+                { goToCart ? <Link to="/cart">Terminar Compra</Link> :<ItemQuantitySelector inicial={0} stock={10} onAdd={onAdd}/> }
+            </div>
+            
         </div>
     );
 }
